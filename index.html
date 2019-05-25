@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Twitter Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/logo.png" action="index.html">
+    </header>
+    <section>
+        <ul>
+            <li>
+                <img src="img/follow.png"> Follow your interests
+            </li>
+            <li>
+                <img src="img/hear.png"> Hear what people are talking about
+            </li>
+            <li>
+                <img src="img/conversation.png"> Join the conversation
+            </li>
+        </ul>
+
+        <h1>See what's happenning in the world right now</h1>
+        <h2>Join Twitter today.</h2>
+
+        <!----	<button>CLick Me</button>
+	   -->
+        <a class="button" href="#" onclick="displaySignUp()">Sign Up</a>
+        <a class="button" href="#" onclick="displayLogin()">Log in</a>
+    </section>
+
+    <footer>
+
+        <a href="#">About us</a> |
+        <a href="#">Help Center</a> |
+        <a href="#">Blog</a> |
+        <a href="#">Status</a> |
+    </footer>
+    <div id="signup" class="modal" style="display: none">
+        <div class="modal-content">
+            <h2 class="modal-heading">Sign up to Twitter</h2>
+            <span class="close" onclick="closeDialog()">X</span>
+            <div class="modal-body">
+                <div>
+                    <img src="img/profile.png">
+                </div>
+                <form name="signup" action="/action_page.php" onsubmit="return validateSignUpForm()">
+                    <input type="text" name="username" placeholder="User name" required="required">
+                    <input type="text" name="username" placeholder="Email address" required="required" pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$">
+                    <input type="password" name="password" placeholder="Password" required="required" >
+                    <input type="password" name="confirmPassword" placeholder="Confirm Password" required="required">
+
+                    <br/>
+                    <a class="btn" href="#">Next</a> -->
+                     <input type="submit" value="singup">
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div id="login" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2 class="modal-heading">Log in to Twitter</h2>
+            <span class="close" onclick="closeDialog()">X</span>
+            <div class="modal-body">
+                <form name="loginform" action="homepage/index.html" onsubmit="return validateLoginForm()" method="post">
+                    <input type="text" name="email" placeholder="Email Address" required="required" pattern="^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$">
+                    <input type="password" name="password" placeholder="Password" required="required">
+                    <br/>
+                    <!--<a class="btn login" href="#">Log in</a> -->
+                    <input type="submit" value="login">
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function displaySignUp() {
+            document.getElementById("signup").style.display = "block";
+        }
+
+        function displayLogin() {
+            document.getElementById("login").style.display = "block";
+        }
+
+        function closeDialog() {
+            document.getElementById("signup").style.display = "none";
+            document.getElementById("login").style.display = "none";
+        }
+
+        function  validateLoginForm(){
+            var x =document.forms["loginform"]["email"].value;
+            var y =document.forms["loginform"]["password"].value;
+            console.log(x);
+            if(x =="" && y ==""){
+                alert("Email and Password must be filled out")
+                return false;
+            }
+            if(x =="" && y !=""){
+                alert("Email must be filled out")
+                return false;
+            }
+            if(x !="" && y ==""){
+                alert("Password must be filled out")
+                return false;
+            }
+        }
+
+        function validateSignUpForm(){
+            var x =document.forms["signup"]["password"].value
+            console.log(x);
+            var y =document.forms["signup"]["confirmPassword"].value;
+            console.log(y);
+            if( x !==y ){
+                alert("Password and confirmePassword must be same")
+                return false;
+            }
+            if(x =="" && y !=""){
+                alert("Email must be filled out")
+                return false;
+            }
+            if(x !="" && y ==""){
+                alert("Password must be filled out")
+                return false;
+            }
+
+        }
+    </script>
+</body>
+</html>

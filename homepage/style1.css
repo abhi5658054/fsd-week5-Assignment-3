@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400,500,900');
+
+header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-repeat: no-repeat;
+	padding: 20px 30px;
+	height: 30px;
+	background-color: white;
+
+}
+
+.header-class{
+	width: 75%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.button{
+	background-color: white;
+	padding : 10px;
+	color : black;
+	border : none;
+	margin : none;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+
+.container{
+	display: flex;
+	width: 80%;
+	margin: 10px auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	background-color: #E7EFEF 
+}
+
+.container-left{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	align-items: center;
+}
+
+/* Styling the container-left dashboardProfileCard" */
+.dashboardProfileCard{
+	width: 80%;
+
+}
+
+/* Styling the profile-header */
+.profile-header{
+	width: 90%;
+	margin: 5px auto;
+	height: 120px;
+	background-color: grey;
+	border-radius: 8px;
+}
+
+/*Styling the Profilestats */
+div .Profilestats{
+	display: flex;
+	justify-content: space-around;
+}
+
+/*Styling the box in profile */
+.box{
+	font-size: lrem;
+}
+
+.box p{
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+.box p:nth-child(2){
+	color: #1F5C78;
+	font-size: 3rem;
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+/*Stylinh the leftsidebar-container-2*/
+.leftsiderbar-container-2{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.header-follower{
+	display: flex;
+	align-items: baseline;
+	border-bottom: 1px solid #444444;
+}
+
+
+.header-followers span{
+	padding: 10px;
+}
+
+.header-follower span:first-child{
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+
+.header-follower span:nth-child(2), span:nth-child(3){
+	font-size: 0.8rem;
+	font-weight: lighter
+}
+
+.follow-footer{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+/*Styling the follower container body @html: line60 */
+.body-follower{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+/*styling the user container which part boby-follower @html: line 62;*/
+.body-follower .user{
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	border-bottom: 2px solid #3333333;
+}
+
+.user div:nth-child(1){
+	padding: 2%;
+}
+
+.user div:nth-child(2){
+	align-self: stretch;
+	padding: 2%;
+}
+
+
+
+
+
+/*----------------------------------------------------------------------------*/
+/*Styling the user-avatar */
+
+/* Targeting the containter-right @index.hmtl line:105;*/
+.container-right{
+	display: flex;
+	flex-direction: column;
+	background-color: transparent;
+}
+.container-right div{
+	display: flex;
+	padding: 20px;
+	justify-content: flex-start;
+	margin: 10px 11px;
+	background-color: white;
+}
+
+/*#happening{
+	width: 90%;
+	box-sizing: border-box;
+	height: 30px;
+	border: solid 1px #ccc;
+	border-radius:15px;
+	align-self: center;
+}*/
+
+.box span{
+	padding: 10px;
+}
+
+.comment-header{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.comment-footer{
+	display: flex;
+	justify-content: flex-start;
+	margin: 4%	
+}
+
+.comment-footer div{
+	margin-right: 10px;
+	font-size: 0.7rem; 
+}
+
+.comment-footer img{
+	vertical-align: middle;
+}
+
+.row1{
+	border-bottom: 1px solid black;
+	color: #7A797A;
+}

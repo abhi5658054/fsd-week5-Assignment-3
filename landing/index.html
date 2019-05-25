@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Twitter Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/logo.png">
+    </header>
+    <section>
+        <ul>
+            <li>
+                <img src="img/follow.png"> Follow your interests
+            </li>
+            <li>
+                <img src="img/hear.png"> Hear what people are talking about
+            </li>
+            <li>
+                <img src="img/conversation.png"> Join the conversation
+            </li>
+        </ul>
+
+        <h1>See what's happenning in the world right now</h1>
+        <h2>Join Twitter today.</h2>
+
+        <!----	<button>CLick Me</button>
+	   -->
+        <a class="button" href="#" onclick="displaySignUp()">Sign Up</a>
+        <a class="button" href="#" onclick="displayLogin()">Log in</a>
+    </section>
+
+    <footer>
+
+        <a href="#">About us</a> |
+        <a href="#">Help Center</a> |
+        <a href="#">Blog</a> |
+        <a href="#">Status</a> |
+    </footer>
+    <div id="singup" class="modal" style="display: none">
+        <div class="modal-content">
+            <h2 class="modal-heading">Sign up to Twitter</h2>
+            <span class="close" onclick="closeDialog()">X</span>
+            <div class="modal-body">
+                <div>
+                    <img src="img/profile.png">
+                </div>
+                <form>
+                    <input type="text" name="username" placeholder="User name">
+                    <input type="text" name="username" placeholder="Email address">
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="confirmPassword" placeholder="Confirm Password">
+
+                    <br/>
+                    <a class="btn" href="#">Next</a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <div id="login" class="modal" style="display: block;">
+        <div class="modal-content">
+            <h2 class="modal-heading">Log in to Twitter</h2>
+            <span class="close" onclick="closeDialog()">X</span>
+            <div class="modal-body">
+                <form>
+                    <input type="text" name="email" placeholder="Email Address">
+                    <input type="password" name="password" placeholder="Password">
+                    <br/>
+                    <a class="btn login" href="#">Log in</a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function displaySignUp() {
+            document.getElementById("singup").style.display = "block";
+        }
+
+        function displayLogin() {
+            document.getElementById("login").style.display = "block";
+        }
+
+        function closeDialog() {
+            document.getElementById("singup").style.display = "none";
+            document.getElementById("login").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
